@@ -1,1 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
 
+body {
+  font: 13px Helvetica, Arial;
+  background: black;
+}
+
+button {
+  background: rgb(130, 224, 255); border: none; padding: 10px;
+  font-weight: bold;
+}
+
+form {
+  background: black; padding: 3px; position: fixed; bottom: 0; width: 100%;
+}
+
+form input {
+  border: 0; padding: 10px; width: 90%; margin-right: .5%;
+}
+
+form button {
+  width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #33ccff; /* blue background with no opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  text-align: center;
+}
+
+.overlay div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay input {
+  border-radius: 10px;
+  height: 30px;
+  width: 300px;
+}
+
+#login {
+  background: #33ccff;
+  position: relative;
+}
+
+#login button {
+  width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px;
+  font-weight: bold;
+}
+
+#buffer {
+  height: 50px;
+}
+
+#messages {
+  list-style-type: none;
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+#messages div {
+  padding: 5px 10px;
+  color: darkgrey;
+}
+
+#messages div:nth-child(odd) {
+  background: #303030;
+}
+
+.alert {
+  background: #990000 !important;
+}
