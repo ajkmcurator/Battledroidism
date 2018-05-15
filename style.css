@@ -1,91 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: monospace;
+  border: 0px;
+  box-sizing: border-box
+}
+
+.user {
+    position: relative;
+    display: inline-block;
+}
+
+.user .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    padding: 5px 0;
+    z-index: 1;
+    top: 5px;
+    left: 100%;
+}
+.user:hover .tooltiptext {
+    visibility: visible;
+}
+
+a {
+  transition-duration: 0.4s;
+  color: #00ccff;
+}
+
+div p {
+  display: inline;
+}
+
+a:hover {
+  color: darkcyan;
+  background: cyan;
+}
+
+.announcement {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.announcement.success {background-color: #4CAF50;}
+.announcement.info {background-color: #2196F3;}
+.announcement.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
 }
 
 body {
-  font: 13px Helvetica, Arial;
-  background: black;
+  font: 15px Roboto Mono, monospace;
+  background: white;
+}
+
+table {
+  width: 100%;
 }
 
 button {
-  background: rgb(130, 224, 255); border: none; padding: 10px;
+  background: cyan;
+  padding: 10px;
   font-weight: bold;
+  font-size: 20px;
+  border: 2px solid darkcyan;
+  transition-duration: .3s;
 }
 
-form {
-  background: black; padding: 3px; position: fixed; bottom: 0; width: 100%;
+button:hover {
+  background: darkcyan;
+  color: cyan;
 }
 
-form input {
-  border: 0; padding: 10px; width: 90%; margin-right: .5%;
+h1, h2, h3, h4, h5, h6 {
+  padding-left: 10px;
 }
 
-form button {
-  width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px;
-  font-weight: bold;
+li {
+  font-size: 20px;
+  padding-left: 20px;
 }
 
-.overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: block;
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #33ccff; /* blue background with no opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+.center {
+  width: 100%;
   text-align: center;
 }
 
-.overlay div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+input {
+  border: 2px solid black;
+  font-size: 18px;
 }
 
-.overlay input {
+.infobox {
   border-radius: 10px;
   height: 30px;
-  width: 300px;
+  width: 200px;
 }
 
-#login {
+h1 {
+  padding: 5px;
+}
+
+header {
   background: #33ccff;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
-#login button {
-  width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px;
-  font-weight: bold;
+header div {
+  float: left;
+  clear: none;
+  text-align: center;
 }
 
-#buffer {
+header div button {
   height: 50px;
 }
 
-#messages {
-  list-style-type: none;
-  background: black;
-  margin: 0;
-  padding: 0;
-}
-
-#messages div {
-  padding: 5px 10px;
-  color: darkgrey;
-}
-
-#messages div:nth-child(odd) {
-  background: #303030;
+header .right {
+  float: right;
 }
 
 .alert {
-  background: #990000 !important;
+  background: red;
+}
+
+.msgSender {
+  background: white;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.msgSender input {
+  padding: 10px;
+  width: 90%;
+  margin-right: .5%;
+}
+
+.msgSender button {
+  width: 9%;
+  border: none;
+  padding: 10px;
+}
+
+#menu {
+  background: lightcyan;
+  max-width: 400px;
+  position: fixed;
+}
+
+#messages div {
+  font-size: 20px;
+  width: 100%;
 }
